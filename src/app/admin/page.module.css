@@ -1,0 +1,381 @@
+.admin_page{
+    color: white;
+    background-color: rgb(29, 31, 31);
+    height: 100vh;
+    padding-inline: 60px;
+    padding-block: 40px;
+    position: relative;
+}
+
+/* Admin Panel Top Styling */
+
+.admin_info h2{
+    font-size: 2.4rem;
+    border-bottom: 1px solid rgb(186, 186, 186, 0.2);
+    margin-bottom: 20px;
+}
+
+.admin_info h3:first-of-type{
+    font-size: 2.2rem;
+    color: var(--button-color);
+    font-weight: 500;
+}
+
+.admin_info h3{
+    text-align: end;
+    font-weight: 400;
+}
+
+/* Admin Panel Utils */
+.admin_utils{
+    padding-top: 40px;
+}
+
+.groups_util{
+    border: 1px solid rgb(186, 186, 186, 0.2);
+    border-radius: 10px;
+    height: 535px;
+}
+
+.groups_util h2{
+    font-size: 2rem;
+    border-bottom: 1px solid rgb(186, 186, 186, 0.2);
+    background-color: rgb(50, 53, 53);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-inline: 15px;
+    padding-block: 7px;
+}
+
+.group_list{
+    padding-inline: 15px;
+    height: 375px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-bottom: 10px;
+}
+
+.group_list::-webkit-scrollbar{
+    width: clamp(4px, 1vw, 6px);
+}
+
+.group_list::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+.group_list::-webkit-scrollbar-thumb{
+    background-color: rgb(46, 46, 46);
+    border-radius: 4px;
+}
+
+.group{
+    border-bottom: 1px solid rgb(186, 186, 186, 0.2);
+    padding-bottom: 6px;
+    padding-top: 10px;
+}
+
+.group_top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px; 
+    flex-wrap: wrap;
+}
+
+.group_info{
+    font-size: 1.5rem;
+    font-weight: 500;
+    flex: 1; 
+    min-width: 0;
+    text-align: start;
+    background-color: rgb(29, 31, 31);
+    border-radius: 5px;
+    transition: 0.15s ease-in;
+    padding: 5px 10px;
+}
+
+.group_info:hover{
+    background-color:rgba(50, 53, 53, 0.4);
+}
+
+.group_members{
+    padding-left: 10px;
+}
+
+.group_members h4{
+    color: var(--button-color);
+}
+
+.no_members_msg{
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: gray;
+}
+
+.edit_btn{
+    background-color: rgb(29, 31, 31);
+    height: 34px;
+    width: 34px;
+    padding: 9px;
+    border-radius: 50%;
+    transition: 0.1s ease-in;
+}
+
+.edit_btn:hover{
+    background-color: rgb(50, 53, 53);
+}
+
+.edit_btn img{
+    height: 100%
+}
+
+.group_util_btns{
+    border-top: 1px solid rgb(186, 186, 186, 0.2);
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-right: 75px;
+    padding-bottom: 20px;
+}
+
+.group_util_btn{
+    background-color: rgb(50, 53, 53);
+    height: 36px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 1rem;
+    font-weight: 500;
+    padding-inline: 10px;
+    padding-block: 10px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    transition: 0.1s ease-in;
+}
+
+.group_util_btn:hover{
+    border: 1px solid rgb(186, 186, 186, 0.2);
+    background-color: rgb(29, 31, 31);
+}
+
+.group_util_btn img{
+    height: 100%;
+}
+
+.group_util_delete{
+    background-color: rgba(255, 0, 0, 0.6);
+}
+
+.group_util_create{
+    background-color: rgba(5, 255, 5, 0.4);
+}
+
+.group_util_checkbox{
+    appearance: none;
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border: 2px solid gray;
+    border-radius: 2px;
+    position: relative;
+    transition: 0.1s ease-in;
+    display: block;
+    margin-right: 2px;
+    flex-shrink: 0;
+}
+
+.group_util_checkbox:hover{
+    border: 2px solid rgba(128, 128, 128, 0.4);
+    box-shadow: 0 0 4px rgba(0,0,0,0.1);
+}
+
+.group_util_checkbox:checked{
+    border: 2px solid white;
+    border-radius: 2px;
+}
+
+.group_util_checkbox:checked::after{
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 6px;
+    width: 4px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Edit Modal Box Styling */
+.edit_modal_overlay{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.edit_modal{
+    height: 75vh;
+    width: 75%;
+    background-color: rgb(29, 31, 31);
+    border: 2px solid rgb(186, 186, 186, 0.2);
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.6);
+    padding-block: 10px 60px;
+    padding-inline: 20px;
+    overflow-y: auto;
+    position: relative;
+}
+
+.edit_modal::-webkit-scrollbar{
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    width: 9px;
+}
+
+.edit_modal_close{
+    position: absolute;
+    font-size: 1rem;
+    padding: 2px 8px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid rgb(186, 186, 186, 0.2);
+    right: 12px;
+    top: 12px;
+    transition: 0.1s ease-in;
+}
+
+.edit_modal_close:hover{
+    background-color: rgb(186, 186, 186, 0.2);
+}
+
+.edit_modal h2{
+    border-bottom: 1px solid rgb(186, 186, 186, 0.2);
+    padding-bottom: 5px;
+    font-size: 2rem;
+    color: var(--button-color);
+}
+
+.edit_modal h4{
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding-bottom: 5px;
+}
+
+.edit_modal input[type="text"]{
+    background-color: transparent;
+    font-size: 0.9rem;
+    color: white;
+    padding: 4px 6px;
+    border: 2px solid rgb(186, 186, 186, 0.2);
+    border-radius: 5px;
+}
+
+.edit_name{
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgb(186, 186, 186, 0.2);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 12px;
+}
+
+.edit_util_change{
+    background-color: var(--button-color);
+}
+
+.edit_members{
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgb(186, 186, 186, 0.2);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.member_item{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-bottom: 4px;
+}
+
+.admin_tag {
+    color: rgba(255, 153, 0, 0.7); 
+    font-weight: 500;
+    margin-left: 4px;
+}
+
+.edit_delete{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.edit_add{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(186, 186, 186, 0.2);
+    padding-bottom: 12px;
+    flex-wrap: wrap;
+    row-gap: 12px;
+}
+
+.edit_add_input{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.edit_add_input select{
+    background-color: rgb(29, 31, 31);
+    font-size: 0.9rem;
+    color: white;
+    padding: 2px 6px;
+    border: 2px solid rgb(186, 186, 186, 0.2);
+    border-radius: 5px;
+    transition: 0.1 ease-in;
+}
+
+.edit_add_input select:hover,.edit_add_input select:focus{
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    outline: none;
+}
+
+@media (max-width: 600px) {
+    .group_util_btns{
+        padding-right: 20px;
+        gap: 10px;
+    }
+    .group_util_btn{
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .admin_page{
+        padding-inline: 30px;
+    }
+    .group_util_checkbox{
+        width: 22px;
+    }
+    .group_util_btns{
+        padding-inline: 0px;
+        gap: 10px;
+        padding-right: 10px;
+    }
+    .group_util_btn{
+        font-size: 0.9rem;
+        gap: 4px;
+    }
+}

@@ -1,0 +1,101 @@
+.verify_page{
+    width: 100%;
+}
+
+.verify_main{
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    align-items: center;
+    padding-inline: 50px;
+}
+
+.verify_img_cn {
+    max-height: 80vh;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.verify_img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.verify_form_cn{
+    min-height: 65vh;
+    height: 65vh;
+    display: flex;
+    align-items: flex-end;
+    padding-inline: 60px 220px; 
+    padding-bottom: 60px;
+}
+
+.verify_form{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 18px;
+    font-size: clamp(0.8rem, 1vw, 1rem);
+}
+
+.verify_form h2{
+    font-size: clamp(2rem, 2.5vw, 3rem);
+}
+
+.gray{
+    color: var(--gray);
+}
+
+.back_btn{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--foreground);
+    font-size: clamp(0.8rem, 1vw, 0.95rem);
+    width: fit-content;
+}
+
+.back_btn span{
+    font-weight: 200;
+    font-size: clamp(1.9rem, 1vw, 2.4rem);
+}
+
+.resend button{
+    padding-left: 5px;
+    font-size: clamp(0.8rem, 1vw, 1rem);
+    color: var(--link-color);
+    background-color: white;
+}
+
+.ca_btn{
+    font-size: clamp(0.8rem, 0.9vw, 0.9rem);
+    padding-block: 10px;
+    border-radius: 4px;
+}
+
+
+@media (max-width: 1085px) {
+    .verify_main{
+        padding-inline: 40px;
+    }
+    .verify_form_cn{
+        padding-inline: 0 40px;
+    }
+}
+
+@media (max-width: 780px) {
+    .verify_main{
+        display: block;
+    }
+    .verify_form_cn{
+        height: 60vh;
+        padding-inline: 0px;
+        padding-bottom: 0px;
+        align-items: center;
+    }
+    .verify_img_cn{
+        display: none;
+    }
+}

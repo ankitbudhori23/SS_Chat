@@ -1,0 +1,97 @@
+.forgot_page{
+    width: 100%;
+}
+
+.forgot_main{
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    align-items: center;
+    padding-inline: 50px;
+}
+
+.forgot_img_cn {
+    max-height: 80vh;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forgot_img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.forgot_form_cn{
+    min-height: 65vh;
+    height: 65vh;
+    display: flex;
+    align-items: flex-end;
+    padding-inline: 60px 180px; 
+    padding-bottom: 60px;
+}
+
+.forgot_form{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 18px;
+    font-size: clamp(0.8rem, 1vw, 1rem);
+}
+
+.forgot_form h2{
+    white-space: nowrap;
+    font-size: clamp(2rem, 2.5vw, 3rem);
+}
+
+.gray{
+    color: var(--gray);
+}
+
+.back_btn{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--foreground);
+    font-size: clamp(0.8rem, 1vw, 0.95rem);
+    width: fit-content;
+}
+
+.back_btn span{
+    font-weight: 200;
+    font-size: clamp(1.9rem, 1vw, 2.4rem);
+}
+
+.ca_btn{
+    font-size: clamp(0.8rem, 0.9vw, 0.9rem);
+    padding-block: 10px;
+    border-radius: 4px;
+}
+
+@media (max-width: 1085px) {
+    .forgot_main{
+        padding-inline: 40px;
+    }
+    .forgot_form_cn{
+        padding-inline: 0 40px;
+    }
+}
+
+@media (max-width: 780px) {
+    .forgot_main{
+        display: block;
+    }
+    .forgot_form_cn{
+        height: 60vh;
+        padding-inline: 0px;
+        padding-bottom: 0px;
+        align-items: center;
+    }
+    .forgot_form h2{
+        white-space: normal;
+    }
+    .forgot_img_cn{
+        display: none;
+    }
+}

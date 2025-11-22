@@ -1,0 +1,23 @@
+/* Layout Header */
+.nav_header{
+  padding: 12px 0px 0px 15px;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-family: "Red Hat Display";
+}
+
+.nav_link{
+  color: var(--foreground);
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  width: fit-content;
+}
+
+.nav_link img{
+  width: clamp(52px, 10vw, 64px)
+}
+
+.nav_link h2{
+  font-weight: 800;
+}
+

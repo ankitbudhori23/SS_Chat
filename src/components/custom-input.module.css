@@ -1,0 +1,41 @@
+.custom_input_cn{
+    position: relative;
+    font-weight: 400;
+    margin-top: 12px;
+}
+
+.custom_input_cn label{
+    background-color: white;
+    padding: 0px 4px;
+    border-radius: 10px;
+    position: absolute;
+    top: -9px;
+    left: 10px;
+}
+
+.custom_input_cn input{
+    width: 100%;
+    height: 47px;
+    outline: none;
+    color: var(--gray);
+    border: 1px solid var(--gray);
+    border-radius: 4px;
+    padding-top: 4px;
+    padding-inline: 14px;
+    font-size: 1rem;
+}
+
+.hide{
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background-color: transparent;
+}
+
+.hide img{
+    width: 20px;
+}
+
+.colspan-2{
+    grid-column: span 2;
+}

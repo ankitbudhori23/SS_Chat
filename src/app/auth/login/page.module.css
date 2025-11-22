@@ -1,0 +1,97 @@
+.login_page{
+    width: 100%;
+}
+
+.login_main{
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    align-items: center;
+    padding-inline: 50px;
+}
+
+.login_img_cn {
+    max-height: 80vh;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.login_form_cn{
+    max-height: 80vh;
+    height: 80vh;
+    display: flex;
+    align-items: flex-end;
+    padding-inline: 60px 120px; 
+    padding-bottom: 60px;
+}
+
+.login_form{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 18px;
+    font-size: clamp(0.8rem, 1vw, 1rem);
+}
+
+.login_form h2{
+    font-size: clamp(2.5rem, 2.5vw, 3rem);
+}
+
+.gray{
+    color: var(--gray);
+}
+
+.switch{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.randf{
+    font-size: clamp(0.8rem, 1vw, 1rem);
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember_me{
+    display: flex;
+    gap: 5px;
+}
+
+.ca_btn{
+    font-size: 0.9rem;
+    padding-block: 10px;
+    border-radius: 4px;
+}
+
+@media (max-width: 1085px) {
+    .login_main{
+        padding-inline: 40px;
+    }
+    .login_form_cn{
+        padding-inline: 0px 40px;
+    }
+}
+
+@media (max-width: 780px) {
+    .login_main{
+        display: block;
+        padding-top: 70px;
+    }
+    .login_form_cn{
+        height: 60vh;
+        padding-inline: 0px;
+        padding-bottom: 0px;
+        align-items: center;
+    }
+    .login_img_cn{
+        display: none;
+    }
+}

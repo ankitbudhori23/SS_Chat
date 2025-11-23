@@ -13,8 +13,6 @@
 # testing
 /coverage
 
-# next.js
-/.next/
 /out/
 
 # production
@@ -30,8 +28,6 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# vercel
-.vercel
 
 # typescript
 *.tsbuildinfo

@@ -1,0 +1,13 @@
+{
+  "/favicon.ico/route": "/favicon.ico",
+  "/_not-found/page": "/_not-found",
+  "/admin/logs/[groupId]/page": "/admin/logs/[groupId]",
+  "/admin/page": "/admin",
+  "/dashboard/page": "/dashboard",
+  "/page": "/",
+  "/auth/reset/page": "/auth/reset",
+  "/auth/login/page": "/auth/login",
+  "/auth/signup/page": "/auth/signup",
+  "/auth/verify/page": "/auth/verify",
+  "/auth/forgot/page": "/auth/forgot"
+}

@@ -14,7 +14,7 @@
 }
 
 .nav_link img{
-  width: clamp(52px, 10vw, 64px)
+  width: clamp(50px, 10vw, 20px)
 }
 
 .nav_link h2{

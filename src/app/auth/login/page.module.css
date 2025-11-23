@@ -24,8 +24,6 @@
 }
 
 .login_form_cn{
-    max-height: 80vh;
-    height: 80vh;
     display: flex;
     align-items: flex-end;
     padding-inline: 60px 120px; 
@@ -46,6 +44,7 @@
 
 .gray{
     color: var(--gray);
+    margin-top: -10px;
 }
 
 .switch{
@@ -68,6 +67,7 @@
 .ca_btn{
     font-size: 0.9rem;
     padding-block: 10px;
+    margin-top: 10px;
     border-radius: 4px;
 }
 
